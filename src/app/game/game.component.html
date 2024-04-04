@@ -4,15 +4,23 @@
 
     <span class="spacer"></span>
 
-    <button mat-icon-button (click)="board.createRandomBoard(boardSize.value);board.editMode=false"><mat-icon>casino</mat-icon></button>
+    <button mat-icon-button (click)="board.createRandomBoard(boardSize.value, boardDensity.value);board.editMode=false"><mat-icon>casino</mat-icon></button>
     <button mat-icon-button (click)="board.clear();board.editMode=true"><mat-icon>delete_forever</mat-icon></button>
-    <div style="min-width:80px;">
-        <mat-select placeholder="size" (selectionChange)="board.createRandomBoard(boardSize.value)" #boardSize>
+    <div class="actions">
+        <mat-select placeholder="Size" (selectionChange)="board.createRandomBoard(boardSize.value, boardDensity.value)" style="min-width:80px;" #boardSize>
             <mat-option [value]="5">5</mat-option>
             <mat-option [value]="10">10</mat-option>
             <mat-option [value]="15">15</mat-option>
             <mat-option [value]="20">20</mat-option>
             <mat-option [value]="30">30</mat-option>
+        </mat-select>
+        <mat-select placeholder="Density" [value]=".5" (selectionChange)="board.createRandomBoard(boardSize.value, boardDensity.value)" style="min-width:120px;" #boardDensity>
+            <mat-option [value]="0">Empty</mat-option>
+            <mat-option [value]=".1">Loose</mat-option>
+            <mat-option [value]=".3">Free</mat-option>
+            <mat-option [value]=".5">Dense</mat-option>
+            <mat-option [value]=".8">Tight</mat-option>
+            <mat-option [value]="1">Full</mat-option>
         </mat-select>
     </div>
 

@@ -44,9 +44,9 @@ export class BoardComponent implements OnInit, OnChanges {
     this.state = state
   }
 
-  public createRandomBoard(size = this.boardSize) {
+  public createRandomBoard(size = this.boardSize, chanceFilled = .3) {
     const board = this.platformBrowser
-      ? this.randomBoard(size, .3)
+      ? this.randomBoard(size, chanceFilled)
       : this.newBoard(size)
     this.resetTo(board)
   }
@@ -69,7 +69,7 @@ export class BoardComponent implements OnInit, OnChanges {
 
   ngOnChanges(changes: SimpleChanges): void {
     if ( 'size' in changes && ! changes['size'].firstChange ) {
-      setTimeout(() => this.state = this.randomBoard(this.boardSize, .1))
+      setTimeout(() => this.state = this.randomBoard(this.boardSize))
     }
     if ( 'editMode' in changes ) {
       this.selected = null
