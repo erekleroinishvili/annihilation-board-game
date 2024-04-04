@@ -36,6 +36,9 @@ export class BoardComponent implements OnInit, OnChanges {
     }
     return count
   }
+  public get moveCount() {
+    return this.lastStates.length
+  }
 
   @HostBinding('class.edit-mode')
   get isEditMode() {return this.editMode }
