@@ -104,7 +104,10 @@ export class BoardComponent implements OnChanges {
   }
 
   protected handleMultiply(row: number, column: number) {
-    this.selected = null
+    if ( this.selected ) {
+      this.selected = null
+      return
+    }
     this.state = this.duplicateState(this.state)
     this.state[row][column] = false
     this.state[row-1][column] = this.state[row][column-1] = true
