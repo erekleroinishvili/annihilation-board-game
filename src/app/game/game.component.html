@@ -22,16 +22,21 @@
 
     <span class="spacer"></span>
 
-    <span>{{ board.coinCount }}</span>
 
-    <span class="spacer"></span>
-
-    <mat-button-toggle-group hideSingleSelectionIndicator [(value)]="board.editMode" #editMode="matButtonToggleGroup">
-        <mat-button-toggle [value]="false"><mat-icon>play_arrow</mat-icon></mat-button-toggle>
-        <mat-button-toggle [value]="true"><mat-icon>edit</mat-icon></mat-button-toggle>
-    </mat-button-toggle-group>
+    <div>
+        <mat-button-toggle-group hideSingleSelectionIndicator [(value)]="board.editMode" #editMode="matButtonToggleGroup">
+            <mat-button-toggle [value]="false"><mat-icon>play_arrow</mat-icon></mat-button-toggle>
+            <mat-button-toggle [value]="true"><mat-icon>edit</mat-icon></mat-button-toggle>
+        </mat-button-toggle-group>
+    </div>
 </mat-toolbar>
 
 <div class="divider"></div>
 
 <board-board [size]="size()" #board />
+
+<div class="divider"></div>
+
+<mat-toolbar>
+    <span>Stones: {{ board.coinCount }}</span>
+</mat-toolbar>
