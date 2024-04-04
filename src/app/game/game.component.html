@@ -1,7 +1,16 @@
 
 <mat-toolbar>
     <button mat-icon-button [disabled]="!board.undoCount" (click)="board.undo()"><mat-icon>undo</mat-icon></button>
-    <button mat-icon-button (click)="board.reset()"><mat-icon>casino</mat-icon></button>
+    <div style="min-width:80px;">
+        <mat-select placeholder="size" (selectionChange)="board.createRandomBoard(boardSize.value)" #boardSize>
+            <mat-option [value]="5">5</mat-option>
+            <mat-option [value]="10">10</mat-option>
+            <mat-option [value]="15">15</mat-option>
+            <mat-option [value]="20">20</mat-option>
+            <mat-option [value]="30">30</mat-option>
+        </mat-select>
+    </div>
+    <button mat-icon-button (click)="board.createRandomBoard(boardSize.value)"><mat-icon>casino</mat-icon></button>
     <button mat-icon-button (click)="board.clear()"><mat-icon>delete_forever</mat-icon></button>
     <mat-slide-toggle
         class="example-margin"

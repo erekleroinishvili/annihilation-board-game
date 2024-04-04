@@ -40,8 +40,8 @@ export class BoardComponent implements OnChanges {
     this.state = state
   }
 
-  public reset() {
-    this.resetTo(this.randomBoard(this.boardSize, .1))
+  public createRandomBoard(size = this.boardSize) {
+    this.resetTo(this.randomBoard(size, .1))
   }
 
   public clear() {
