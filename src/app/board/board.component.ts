@@ -68,11 +68,13 @@ export class BoardComponent implements OnChanges {
   private newBoard(size: number): boolean[][] {
     return new Array<void>(size).fill(void 0)
       .map(() => new Array<boolean>(size).fill(false))
-      .map((row, r) => row.map((cell, c) => 0 < r && r < size - 1 && 0 < c && c < size - 1 && cell))
   }
 
   private randomBoard(size: number, chanceFilled = .5): boolean[][] {
-    return this.newBoard(size).map(row => row.map(() => Math.random() < chanceFilled))
+    return this.newBoard(size)
+      .map(row => row.map(() => Math.random() < chanceFilled))
+      .map((row, r) => row.map((cell, c) => 0 < r && r < size - 1 && 0 < c && c < size - 1 && cell))
+
   }
 
   protected canAnnihilate(row: number, column: number) {
