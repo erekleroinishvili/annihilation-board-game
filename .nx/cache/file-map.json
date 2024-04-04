@@ -54,6 +54,10 @@
         "hash": "4785519591168477813"
       },
       {
+        "file": ".github/workflows/angular.yml",
+        "hash": "6449847305704636342"
+      },
+      {
         "file": ".gitignore",
         "hash": "4689145951703824387"
       },
@@ -75,7 +79,7 @@
       },
       {
         "file": "angular.json",
-        "hash": "17438277894271302971"
+        "hash": "10980696311199035496"
       },
       {
         "file": "package-lock.json",
@@ -91,7 +95,7 @@
       },
       {
         "file": "src/app/app.component.html",
-        "hash": "16702821869493685435"
+        "hash": "9083695125298195049"
       },
       {
         "file": "src/app/app.component.scss",
@@ -99,7 +103,7 @@
       },
       {
         "file": "src/app/app.component.ts",
-        "hash": "14025605914788328425"
+        "hash": "12631861144224582738"
       },
       {
         "file": "src/app/app.config.server.ts",
@@ -107,47 +111,43 @@
       },
       {
         "file": "src/app/app.config.ts",
-        "hash": "2030811169412786070"
-      },
-      {
-        "file": "src/app/app.routes.ts",
-        "hash": "1797941228637139946"
+        "hash": "16412782615943532376"
       },
       {
         "file": "src/app/board/board.component.html",
-        "hash": "13358048025194424688"
+        "hash": "8142546516076535922"
       },
       {
         "file": "src/app/board/board.component.scss",
-        "hash": "8209056761193643213"
+        "hash": "3228414675371329571"
       },
       {
         "file": "src/app/board/board.component.ts",
-        "hash": "5167338491500580395"
+        "hash": "14872597824736829978"
       },
       {
         "file": "src/app/cell/cell.component.html",
-        "hash": "3244421341483603138"
+        "hash": "14409966246646889039"
       },
       {
         "file": "src/app/cell/cell.component.scss",
-        "hash": "14229222574235700029"
+        "hash": "14629403756520927450"
       },
       {
         "file": "src/app/cell/cell.component.ts",
-        "hash": "13155898711131303820"
+        "hash": "5151083252118437320"
       },
       {
         "file": "src/app/game/game.component.html",
-        "hash": "12311827924096084568"
+        "hash": "11450675669900592463"
       },
       {
         "file": "src/app/game/game.component.scss",
-        "hash": "3244421341483603138"
+        "hash": "16540488459731793761"
       },
       {
         "file": "src/app/game/game.component.ts",
-        "hash": "753489521563812064"
+        "hash": "9697506609845423385"
       },
       {
         "file": "src/assets/.gitkeep",
@@ -159,7 +159,7 @@
       },
       {
         "file": "src/index.html",
-        "hash": "10673247521505818989"
+        "hash": "1560963273671755301"
       },
       {
         "file": "src/main.server.ts",

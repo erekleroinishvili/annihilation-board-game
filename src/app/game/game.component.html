@@ -11,17 +11,9 @@
         </mat-select>
     </div>
     <button mat-icon-button (click)="board.createRandomBoard(boardSize.value)"><mat-icon>casino</mat-icon></button>
-    <button mat-icon-button (click)="board.clear()"><mat-icon>delete_forever</mat-icon></button>
-    <mat-slide-toggle
-        class="example-margin"
-        color="primary"
-        [checked]="false"
-    >
-        <mat-icon>edit</mat-icon>
-    </mat-slide-toggle>
+    <button mat-icon-button (click)="board.clear();board.editMode=true"><mat-icon>delete_forever</mat-icon></button>
 
     <span class="spacer"></span>
-
 
     <div>
         <mat-button-toggle-group hideSingleSelectionIndicator [(value)]="board.editMode" #editMode="matButtonToggleGroup">
@@ -38,5 +30,5 @@
 <div class="divider"></div>
 
 <mat-toolbar>
-    <span>Stones: {{ board.coinCount }}</span>
+    <span>Stones: {{ board.coinCount || ''}}</span>
 </mat-toolbar>
