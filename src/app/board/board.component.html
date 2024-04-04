@@ -1,0 +1,21 @@
+<div class="stack">
+@for (row of state; track row; let rowIndex = $index) {
+    <div class="row">
+    @for (cell of row; track cell; let columnIndex = $index) {
+        <board-cell
+            [value]="cell"
+            [index]="(rowIndex+columnIndex)%2"
+            (valueChange)="handleFlip(rowIndex, columnIndex, $event)"
+            [multiply]="canMultiply(rowIndex, columnIndex)"
+            [annihilate]="canAnnihilate(rowIndex, columnIndex)"
+            [selected]="selected?.row === rowIndex && selected?.column === columnIndex"
+            [editmode]="editMode"
+            [style.height.px]="20"
+            [style.width.px]="20"
+            (doAnnihilate)="handleAnnihilate(rowIndex, columnIndex)"
+            (doMultiply)="handleMultiply(rowIndex, columnIndex)"
+        />
+    }
+    </div>
+}
+</div>

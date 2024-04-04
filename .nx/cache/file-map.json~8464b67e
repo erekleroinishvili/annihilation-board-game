@@ -1,0 +1,190 @@
+{
+  "version": "6.0",
+  "nxVersion": "18.2.2",
+  "deps": {
+    "@angular/animations": "^17.3.0",
+    "@angular/cdk": "^17.3.2",
+    "@angular/common": "^17.3.0",
+    "@angular/compiler": "^17.3.0",
+    "@angular/core": "^17.3.0",
+    "@angular/forms": "^17.3.0",
+    "@angular/material": "^17.3.2",
+    "@angular/platform-browser": "^17.3.0",
+    "@angular/platform-browser-dynamic": "^17.3.0",
+    "@angular/platform-server": "^17.3.0",
+    "@angular/router": "^17.3.0",
+    "@angular/ssr": "^17.3.3",
+    "express": "^4.18.2",
+    "rxjs": "~7.8.0",
+    "tslib": "^2.3.0",
+    "zone.js": "~0.14.3",
+    "@angular-devkit/build-angular": "^17.3.3",
+    "@angular-eslint/builder": "17.3.0",
+    "@angular-eslint/eslint-plugin": "17.3.0",
+    "@angular-eslint/eslint-plugin-template": "17.3.0",
+    "@angular-eslint/schematics": "17.3.0",
+    "@angular-eslint/template-parser": "17.3.0",
+    "@angular/cli": "^17.3.3",
+    "@angular/compiler-cli": "^17.3.0",
+    "@types/express": "^4.17.17",
+    "@types/jasmine": "~5.1.0",
+    "@types/node": "^18.18.0",
+    "@typescript-eslint/eslint-plugin": "7.2.0",
+    "@typescript-eslint/parser": "7.2.0",
+    "eslint": "^8.57.0",
+    "jasmine-core": "~5.1.0",
+    "karma": "~6.4.0",
+    "karma-chrome-launcher": "~3.2.0",
+    "karma-coverage": "~2.2.0",
+    "karma-jasmine": "~5.1.0",
+    "karma-jasmine-html-reporter": "~2.1.0",
+    "typescript": "~5.4.2"
+  },
+  "pathMappings": {},
+  "nxJsonPlugins": [],
+  "fileMap": {
+    "projectFileMap": {},
+    "nonProjectFiles": [
+      {
+        "file": ".editorconfig",
+        "hash": "17241496168097493888"
+      },
+      {
+        "file": ".eslintrc.json",
+        "hash": "4785519591168477813"
+      },
+      {
+        "file": ".gitignore",
+        "hash": "4689145951703824387"
+      },
+      {
+        "file": ".vscode/extensions.json",
+        "hash": "11934160580685414355"
+      },
+      {
+        "file": ".vscode/launch.json",
+        "hash": "17406702432687230417"
+      },
+      {
+        "file": ".vscode/tasks.json",
+        "hash": "10093397977228577162"
+      },
+      {
+        "file": "README.md",
+        "hash": "10075072862542872348"
+      },
+      {
+        "file": "angular.json",
+        "hash": "17438277894271302971"
+      },
+      {
+        "file": "package-lock.json",
+        "hash": "14656654247298101206"
+      },
+      {
+        "file": "package.json",
+        "hash": "6710206943902054821"
+      },
+      {
+        "file": "server.ts",
+        "hash": "17556996765790181515"
+      },
+      {
+        "file": "src/app/app.component.html",
+        "hash": "16702821869493685435"
+      },
+      {
+        "file": "src/app/app.component.scss",
+        "hash": "3244421341483603138"
+      },
+      {
+        "file": "src/app/app.component.ts",
+        "hash": "14025605914788328425"
+      },
+      {
+        "file": "src/app/app.config.server.ts",
+        "hash": "15184490126418035619"
+      },
+      {
+        "file": "src/app/app.config.ts",
+        "hash": "2030811169412786070"
+      },
+      {
+        "file": "src/app/app.routes.ts",
+        "hash": "1797941228637139946"
+      },
+      {
+        "file": "src/app/board/board.component.html",
+        "hash": "13358048025194424688"
+      },
+      {
+        "file": "src/app/board/board.component.scss",
+        "hash": "8209056761193643213"
+      },
+      {
+        "file": "src/app/board/board.component.ts",
+        "hash": "5167338491500580395"
+      },
+      {
+        "file": "src/app/cell/cell.component.html",
+        "hash": "3244421341483603138"
+      },
+      {
+        "file": "src/app/cell/cell.component.scss",
+        "hash": "14229222574235700029"
+      },
+      {
+        "file": "src/app/cell/cell.component.ts",
+        "hash": "13155898711131303820"
+      },
+      {
+        "file": "src/app/game/game.component.html",
+        "hash": "12311827924096084568"
+      },
+      {
+        "file": "src/app/game/game.component.scss",
+        "hash": "3244421341483603138"
+      },
+      {
+        "file": "src/app/game/game.component.ts",
+        "hash": "753489521563812064"
+      },
+      {
+        "file": "src/assets/.gitkeep",
+        "hash": "3244421341483603138"
+      },
+      {
+        "file": "src/favicon.ico",
+        "hash": "3988961587069885523"
+      },
+      {
+        "file": "src/index.html",
+        "hash": "10673247521505818989"
+      },
+      {
+        "file": "src/main.server.ts",
+        "hash": "9257623809215978365"
+      },
+      {
+        "file": "src/main.ts",
+        "hash": "4169901790405087765"
+      },
+      {
+        "file": "src/styles.scss",
+        "hash": "1619517860747131107"
+      },
+      {
+        "file": "tsconfig.app.json",
+        "hash": "2442507913137902887"
+      },
+      {
+        "file": "tsconfig.json",
+        "hash": "3200458784466797971"
+      },
+      {
+        "file": "tsconfig.spec.json",
+        "hash": "5122839733245053999"
+      }
+    ]
+  }
+}
