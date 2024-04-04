@@ -2,7 +2,7 @@ import { Component, Input, OnChanges, SimpleChanges, } from '@angular/core';
 import { CellComponent } from '../cell/cell.component';
 
 const DEFAULT = {
-  size: 20,
+  size: 10,
 }
 
 @Component({
@@ -16,7 +16,7 @@ const DEFAULT = {
 })
 export class BoardComponent implements OnChanges {
 
-  @Input() size = 10
+  @Input() size = DEFAULT.size
   @Input() editMode: boolean = false
 
   protected get boardSize() { return this.size ?? DEFAULT.size }
