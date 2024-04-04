@@ -1,6 +1,11 @@
 
 <mat-toolbar>
     <button mat-icon-button [disabled]="!board.undoCount" (click)="board.undo()"><mat-icon>undo</mat-icon></button>
+
+    <span class="spacer"></span>
+
+    <button mat-icon-button (click)="board.createRandomBoard(boardSize.value);board.editMode=false"><mat-icon>casino</mat-icon></button>
+    <button mat-icon-button (click)="board.clear();board.editMode=true"><mat-icon>delete_forever</mat-icon></button>
     <div style="min-width:80px;">
         <mat-select placeholder="size" (selectionChange)="board.createRandomBoard(boardSize.value)" #boardSize>
             <mat-option [value]="5">5</mat-option>
@@ -10,8 +15,6 @@
             <mat-option [value]="30">30</mat-option>
         </mat-select>
     </div>
-    <button mat-icon-button (click)="board.createRandomBoard(boardSize.value);board.editMode=false"><mat-icon>casino</mat-icon></button>
-    <button mat-icon-button (click)="board.clear();board.editMode=true"><mat-icon>delete_forever</mat-icon></button>
 
     <span class="spacer"></span>
 
@@ -30,5 +33,7 @@
 <div class="divider"></div>
 
 <mat-toolbar>
+    <span class="spacer"></span>
     <span>Stones: {{ board.coinCount || ''}}</span>
+    <span class="spacer"></span>
 </mat-toolbar>
