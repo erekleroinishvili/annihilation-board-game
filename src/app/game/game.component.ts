@@ -5,6 +5,7 @@ import { MatIconModule } from '@angular/material/icon'
 import { MatSelectModule } from '@angular/material/select'
 import { MatSlideToggleModule } from '@angular/material/slide-toggle'
 import { MatToolbarModule } from '@angular/material/toolbar'
+import { MatTooltipModule } from '@angular/material/tooltip'
 
 import { BoardComponent } from '../board/board.component'
 
@@ -19,6 +20,7 @@ import { BoardComponent } from '../board/board.component'
     MatSelectModule,
     MatSlideToggleModule,
     MatToolbarModule,
+    MatTooltipModule,
 
     BoardComponent,
   ],

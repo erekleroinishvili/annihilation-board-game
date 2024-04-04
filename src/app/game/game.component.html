@@ -1,20 +1,20 @@
 
 <mat-toolbar>
-    <button mat-icon-button [disabled]="!board.undoCount" (click)="board.undo()"><mat-icon>undo</mat-icon></button>
+    <button mat-icon-button matTooltip="Undo move" [disabled]="!board.undoCount" (click)="board.undo()"><mat-icon>undo</mat-icon></button>
 
     <span class="spacer"></span>
 
-    <button mat-icon-button (click)="board.createRandomBoard(boardSize.value, boardDensity.value);board.editMode=false"><mat-icon>casino</mat-icon></button>
-    <button mat-icon-button (click)="board.clear();board.editMode=true"><mat-icon>delete_forever</mat-icon></button>
+    <button mat-icon-button matTooltip="Generate random board" (click)="board.createRandomBoard(boardSize.value, boardDensity.value);board.editMode=false"><mat-icon>casino</mat-icon></button>
+    <button mat-icon-button matTooltip="Clear board" (click)="board.clear();board.editMode=true"><mat-icon>delete_forever</mat-icon></button>
     <div class="actions">
-        <mat-select placeholder="Size" (selectionChange)="board.createRandomBoard(boardSize.value, boardDensity.value)" style="min-width:80px;" #boardSize>
+        <mat-select placeholder="Size" matTooltip="Board Size" (selectionChange)="board.createRandomBoard(boardSize.value, boardDensity.value)" style="min-width:80px;" #boardSize>
             <mat-option [value]="5">5</mat-option>
             <mat-option [value]="10">10</mat-option>
             <mat-option [value]="15">15</mat-option>
             <mat-option [value]="20">20</mat-option>
             <mat-option [value]="30">30</mat-option>
         </mat-select>
-        <mat-select placeholder="Density" [value]=".5" (selectionChange)="board.createRandomBoard(boardSize.value, boardDensity.value)" style="min-width:120px;" #boardDensity>
+        <mat-select placeholder="Density" matTooltip="Board Density" [value]=".5" (selectionChange)="board.createRandomBoard(boardSize.value, boardDensity.value)" style="min-width:120px;" #boardDensity>
             <mat-option [value]="0">Empty</mat-option>
             <mat-option [value]=".1">Loose</mat-option>
             <mat-option [value]=".3">Free</mat-option>
@@ -28,8 +28,8 @@
 
     <div>
         <mat-button-toggle-group hideSingleSelectionIndicator [(value)]="board.editMode" #editMode="matButtonToggleGroup">
-            <mat-button-toggle [value]="false"><mat-icon>play_arrow</mat-icon></mat-button-toggle>
-            <mat-button-toggle [value]="true"><mat-icon>edit</mat-icon></mat-button-toggle>
+            <mat-button-toggle [value]="false" matTooltip="Game mode"><mat-icon>play_arrow</mat-icon></mat-button-toggle>
+            <mat-button-toggle [value]="true" matTooltip="Edit mode"><mat-icon>edit</mat-icon></mat-button-toggle>
         </mat-button-toggle-group>
     </div>
 </mat-toolbar>
