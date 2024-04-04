@@ -1,5 +1,6 @@
-import { Component, Input, OnChanges, SimpleChanges, } from '@angular/core';
+import { Component, Input, OnChanges, OnInit, PLATFORM_ID, SimpleChanges, inject, } from '@angular/core';
 import { CellComponent } from '../cell/cell.component';
+import { isPlatformBrowser } from '@angular/common';
 
 const DEFAULT = {
   size: 10,
@@ -14,10 +15,12 @@ const DEFAULT = {
   templateUrl: './board.component.html',
   styleUrl: './board.component.scss'
 })
-export class BoardComponent implements OnChanges {
+export class BoardComponent implements OnInit, OnChanges {
 
   @Input() size = DEFAULT.size
   @Input() editMode: boolean = false
+
+  private platformBrowser = isPlatformBrowser(inject(PLATFORM_ID))
 
   protected get boardSize() { return this.size ?? DEFAULT.size }
 
@@ -35,13 +38,17 @@ export class BoardComponent implements OnChanges {
   }
 
   private resetTo(state: boolean[][]) {
+    this.size = state.length
     this.lastStates = []
     this.selected = null
     this.state = state
   }
 
   public createRandomBoard(size = this.boardSize) {
-    this.resetTo(this.randomBoard(size, .1))
+    const board = this.platformBrowser
+      ? this.randomBoard(size, .1)
+      : this.newBoard(size)
+    this.resetTo(board)
   }
 
   public clear() {
@@ -56,8 +63,12 @@ export class BoardComponent implements OnChanges {
 
   selected: {row: number, column: number} | null = null
 
+  ngOnInit(): void {
+    if ( ! this.state.length ) this.createRandomBoard()
+  }
+
   ngOnChanges(changes: SimpleChanges): void {
-    if ( 'size' in changes ) {
+    if ( 'size' in changes && ! changes['size'].firstChange ) {
       setTimeout(() => this.state = this.randomBoard(this.boardSize, .1))
     }
     if ( 'editMode' in changes ) {
