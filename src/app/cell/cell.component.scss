@@ -13,7 +13,7 @@
     animation: tilt-shaking 2s infinite;
 }
 
-:host.can-annihilate, :host.can-multiply {
+:host.can-annihilate, :host.can-multiply, :host.edit-mode {
     cursor: pointer;
 }
 

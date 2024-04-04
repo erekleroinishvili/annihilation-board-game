@@ -1,5 +1,15 @@
 $gap: 8px;
 
+:host {
+    display: block;
+    padding-block: 16px;
+    transition: background-color 1s;
+}
+
+:host.edit-mode {
+    background-color: lightblue;
+}
+
 .stack {
     display: grid;
     grid-auto-flow: row;

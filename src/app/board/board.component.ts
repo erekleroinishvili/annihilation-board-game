@@ -1,4 +1,4 @@
-import { Component, Input, OnChanges, OnInit, PLATFORM_ID, SimpleChanges, inject, } from '@angular/core';
+import { Component, HostBinding, Input, OnChanges, OnInit, PLATFORM_ID, SimpleChanges, inject, } from '@angular/core';
 import { CellComponent } from '../cell/cell.component';
 import { isPlatformBrowser } from '@angular/common';
 
@@ -36,6 +36,9 @@ export class BoardComponent implements OnInit, OnChanges {
     }
     return count
   }
+
+  @HostBinding('class.edit-mode')
+  get isEditMode() {return this.editMode }
 
   private resetTo(state: boolean[][]) {
     this.size = state.length
