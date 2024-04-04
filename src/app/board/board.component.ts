@@ -18,7 +18,12 @@ const DEFAULT = {
 export class BoardComponent implements OnInit, OnChanges {
 
   @Input() size = DEFAULT.size
-  @Input() editMode: boolean = false
+  @Input() set editMode(editMode: boolean) {
+    this.#editMode = editMode
+    this.selected = null
+  }
+  get editMode() { return this.#editMode }
+  #editMode = false
 
   private platformBrowser = isPlatformBrowser(inject(PLATFORM_ID))
 
@@ -67,7 +72,7 @@ export class BoardComponent implements OnInit, OnChanges {
     this.state = this.lastStates.pop() ?? this.state
   }
 
-  selected: {row: number, column: number} | null = null
+  protected selected: {row: number, column: number} | null = null
 
   ngOnInit(): void {
     if ( ! this.state.length ) this.createRandomBoard()
@@ -76,9 +81,6 @@ export class BoardComponent implements OnInit, OnChanges {
   ngOnChanges(changes: SimpleChanges): void {
     if ( 'size' in changes && ! changes['size'].firstChange ) {
       setTimeout(() => this.state = this.randomBoard(this.boardSize))
-    }
-    if ( 'editMode' in changes ) {
-      this.selected = null
     }
   }
 
@@ -104,7 +106,7 @@ export class BoardComponent implements OnInit, OnChanges {
   }
 
   protected handleFlip(row: number, column: number, newState: boolean) {
-    this.state = this.duplicateState(this.state)
+    this.state = this.duplicateState(this.state, false)
     this.state[row][column] = newState
   }
 
@@ -167,8 +169,8 @@ export class BoardComponent implements OnInit, OnChanges {
       cell1.column === cell2.column && Math.abs(cell1.row - cell2.row) === 1
   }
 
-  private duplicateState(state: boolean[][]) {
-    this.lastStates.push(state)
+  private duplicateState(state: boolean[][], saveState = true) {
+    saveState && this.lastStates.push(state)
     return state.map(row => row.slice())
   }
 
