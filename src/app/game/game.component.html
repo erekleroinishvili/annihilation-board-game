@@ -10,7 +10,7 @@
             <mat-option [value]="30">30</mat-option>
         </mat-select>
     </div>
-    <button mat-icon-button (click)="board.createRandomBoard(boardSize.value)"><mat-icon>casino</mat-icon></button>
+    <button mat-icon-button (click)="board.createRandomBoard(boardSize.value);board.editMode=false"><mat-icon>casino</mat-icon></button>
     <button mat-icon-button (click)="board.clear();board.editMode=true"><mat-icon>delete_forever</mat-icon></button>
 
     <span class="spacer"></span>
