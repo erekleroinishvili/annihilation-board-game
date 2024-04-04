@@ -46,7 +46,7 @@ export class BoardComponent implements OnInit, OnChanges {
 
   public createRandomBoard(size = this.boardSize) {
     const board = this.platformBrowser
-      ? this.randomBoard(size, .1)
+      ? this.randomBoard(size, .3)
       : this.newBoard(size)
     this.resetTo(board)
   }
@@ -81,10 +81,11 @@ export class BoardComponent implements OnInit, OnChanges {
       .map(() => new Array<boolean>(size).fill(false))
   }
 
-  private randomBoard(size: number, chanceFilled = .5): boolean[][] {
+  private randomBoard(size: number, chanceFilled = .5, clearMargin = 2): boolean[][] {
+
     return this.newBoard(size)
       .map(row => row.map(() => Math.random() < chanceFilled))
-      .map((row, r) => row.map((cell, c) => 0 < r && r < size - 1 && 0 < c && c < size - 1 && cell))
+      .map((row, r) => row.map((cell, c) => clearMargin <= r && r < size - clearMargin && clearMargin <= c && c < size - clearMargin && cell))
 
   }
 
