@@ -1,7 +1,7 @@
 <div class="stack">
-@for (row of state; track row; let rowIndex = $index) {
+@for (row of state; track rowIndex; let rowIndex = $index) {
     <div class="row">
-    @for (cell of row; track cell; let columnIndex = $index) {
+    @for (cell of row; track columnIndex; let columnIndex = $index) {
         <board-cell
             [value]="cell"
             [index]="(rowIndex+columnIndex)%2"

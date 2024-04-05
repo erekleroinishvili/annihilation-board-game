@@ -1,3 +1,4 @@
+import { animate, state, style, transition, trigger } from '@angular/animations';
 import { Component, EventEmitter, HostBinding, HostListener, Input, Output, computed, input, model } from '@angular/core';
 
 @Component({
@@ -5,7 +6,13 @@ import { Component, EventEmitter, HostBinding, HostListener, Input, Output, comp
   standalone: true,
   imports: [],
   templateUrl: './cell.component.html',
-  styleUrl: './cell.component.scss'
+  styleUrl: './cell.component.scss',
+  animations: [
+    trigger('fade-in-out', [
+      state('void', style({transform: 'scale(0)'})),
+      transition('* => *', animate(200)),
+    ]),
+  ]
 })
 export class CellComponent {
 
