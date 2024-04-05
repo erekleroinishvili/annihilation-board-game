@@ -11,6 +11,7 @@ import { toSignal } from '@angular/core/rxjs-interop'
 
 import { BoardComponent } from '../board/board.component'
 import { NgIf } from '@angular/common'
+import { FormsModule } from '@angular/forms'
 
 
 @Component({
@@ -27,6 +28,7 @@ import { NgIf } from '@angular/common'
 
     BoardComponent,
     NgIf,
+    FormsModule,
   ],
   templateUrl: './game.component.html',
   styleUrl: './game.component.scss'
@@ -34,7 +36,9 @@ import { NgIf } from '@angular/common'
 export class GameComponent {
   size = input<number>(10)
 
+  protected showAdvancedStats = false
+
   private readonly data$ = inject(ActivatedRoute).data
   private readonly dataS = toSignal(this.data$)
-  protected readonly checkerboard = computed(() => this.dataS()?.['checkerboard'])
+  protected readonly analysisMode = computed(() => Boolean(this.dataS()?.['analysis']))
 }

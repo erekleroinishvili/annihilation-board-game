@@ -11,7 +11,7 @@ export const routes: Routes = [
         path: 'x-ray',
         component: GameComponent,
         data: {
-            checkerboard: true,
+            analysis: true,
         }
     },
     {
