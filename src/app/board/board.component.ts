@@ -33,15 +33,18 @@ export class BoardComponent implements OnInit, OnChanges {
   private lastStates: boolean[][][] = []
 
   protected state: boolean[][] = []
-  public get coinCount() {
+  private countCoins(condition: (row: number, column: number) => boolean = () => true) {
     let count = 0
-    for (const row of this.state) {
-      for (const cell of row) {
-        if ( cell ) ++count
+    for (const r in this.state) {
+      for (const c in this.state[r]) {
+        if ( condition(+r, +c) && this.state[r][c] ) ++count
       }
     }
     return count
   }
+  public get coinCount() {return this.countCoins()}
+  public get coinCountEven() {return this.countCoins((row, column) => ((row + column) & 1) === 0)}
+  public get coinCountOdd() {return this.countCoins((row, column) => ((row + column) & 1) === 1)}
   public get moveCount() {
     return this.lastStates.length
   }

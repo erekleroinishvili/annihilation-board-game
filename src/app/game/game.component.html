@@ -41,7 +41,26 @@
 <div class="divider"></div>
 
 <mat-toolbar>
-    <span>Stones: {{ board.coinCount || ''}}</span>
+    <span>Stones: {{ board.coinCount }}</span>
     <span class="spacer"></span>
     <span>Moves: {{ board.moveCount }}</span>
 </mat-toolbar>
+
+
+<div class="key-value" *ngIf="checkerboard()">
+    <div class="even cell"></div>
+    {{ board.coinCountEven }}
+
+    <div class="odd cell"></div>
+    {{ board.coinCountOdd }}
+
+    <div class="row">
+        <div class="even cell"></div>&mdash;<div class="odd cell"></div>
+    </div>
+    {{ board.coinCountEven - board.coinCountOdd}}
+
+    <div class="row">
+        (<div class="even cell"></div>&mdash;<div class="odd cell"></div>) mod 5
+    </div>
+    {{((board.coinCountEven - board.coinCountOdd) % 5 + 5 ) % 5}}
+</div>

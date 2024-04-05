@@ -10,6 +10,7 @@ import { ActivatedRoute } from '@angular/router';
 import { toSignal } from '@angular/core/rxjs-interop'
 
 import { BoardComponent } from '../board/board.component'
+import { NgIf } from '@angular/common'
 
 
 @Component({
@@ -25,6 +26,7 @@ import { BoardComponent } from '../board/board.component'
     MatTooltipModule,
 
     BoardComponent,
+    NgIf,
   ],
   templateUrl: './game.component.html',
   styleUrl: './game.component.scss'
