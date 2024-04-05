@@ -5,13 +5,14 @@
         <board-cell
             [value]="cell"
             [index]="(rowIndex+columnIndex)%2"
-            (valueChange)="handleFlip(rowIndex, columnIndex, $event)"
             [multiply]="canMultiply(rowIndex, columnIndex)"
             [annihilate]="canAnnihilate(rowIndex, columnIndex)"
+            [checkerboard]="checkerboard()"
             [selected]="selected?.row === rowIndex && selected?.column === columnIndex"
             [editmode]="editMode"
             [style.height.px]="20"
             [style.width.px]="20"
+            (valueChange)="handleFlip(rowIndex, columnIndex, $event)"
             (doAnnihilate)="handleAnnihilate(rowIndex, columnIndex)"
             (doMultiply)="handleMultiply(rowIndex, columnIndex)"
         />

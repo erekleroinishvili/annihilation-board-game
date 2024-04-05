@@ -1,7 +1,7 @@
 :host {
     display: block;
-    border-width: thick;
-    border-style: solid;
+    border: thick solid #e6f2ff;
+    background-color: #e6f2ff;
     transition: border-radius 500ms;
 }
 
@@ -34,13 +34,7 @@
     border: 1px solid darkgray;
 }
 
-
-:host:not(.even) {
-    border-color: #e6f2ff;
-    background-color: #e6f2ff;
-}
-
-:host.even {
+:host.checkerboard.even {
     border-color: #e6ccff;
     background-color: #e6ccff;
 }

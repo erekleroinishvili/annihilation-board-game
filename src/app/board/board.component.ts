@@ -1,4 +1,4 @@
-import { Component, HostBinding, Input, OnChanges, OnInit, PLATFORM_ID, SimpleChanges, inject, } from '@angular/core';
+import { Component, HostBinding, Input, OnChanges, OnInit, PLATFORM_ID, SimpleChanges, inject, input, } from '@angular/core';
 import { CellComponent } from '../cell/cell.component';
 import { isPlatformBrowser } from '@angular/common';
 
@@ -24,6 +24,7 @@ export class BoardComponent implements OnInit, OnChanges {
   }
   get editMode() { return this.#editMode }
   #editMode = false
+  checkerboard = input(false)
 
   private platformBrowser = isPlatformBrowser(inject(PLATFORM_ID))
 

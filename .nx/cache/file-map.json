@@ -115,39 +115,39 @@
       },
       {
         "file": "src/app/board/board.component.html",
-        "hash": "8142546516076535922"
+        "hash": "15799066444634079982"
       },
       {
         "file": "src/app/board/board.component.scss",
-        "hash": "3228414675371329571"
+        "hash": "10148160979837148396"
       },
       {
         "file": "src/app/board/board.component.ts",
-        "hash": "14872597824736829978"
+        "hash": "5977986993485186735"
       },
       {
         "file": "src/app/cell/cell.component.html",
-        "hash": "14409966246646889039"
+        "hash": "4270508197812099086"
       },
       {
         "file": "src/app/cell/cell.component.scss",
-        "hash": "14629403756520927450"
+        "hash": "13620613219412824868"
       },
       {
         "file": "src/app/cell/cell.component.ts",
-        "hash": "5151083252118437320"
+        "hash": "8806311006476787644"
       },
       {
         "file": "src/app/game/game.component.html",
-        "hash": "11450675669900592463"
+        "hash": "4169017226420717758"
       },
       {
         "file": "src/app/game/game.component.scss",
-        "hash": "16540488459731793761"
+        "hash": "5282589410978430353"
       },
       {
         "file": "src/app/game/game.component.ts",
-        "hash": "9697506609845423385"
+        "hash": "14345779139897849318"
       },
       {
         "file": "src/assets/.gitkeep",
@@ -155,7 +155,7 @@
       },
       {
         "file": "src/favicon.ico",
-        "hash": "3988961587069885523"
+        "hash": "14976138827125917077"
       },
       {
         "file": "src/index.html",

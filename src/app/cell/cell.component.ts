@@ -18,9 +18,16 @@ export class CellComponent {
 
   value = model.required<boolean>()
   index = input.required<number>()
+
   annihilate = input.required<boolean>()
   multiply = input.required<boolean>()
   editmode = input(false)
+
+
+  @HostBinding('class.checkerboard')
+  @Input() checkerboard?: boolean
+
+  // checkerboard = input(false)
 
   @HostBinding('class.selected')
   @Input() selected?: boolean
