@@ -51,7 +51,7 @@ export class GameComponent {
     if ( toChecked ) {
       if ( this.spoilerAlertDone ) this.showAnalysisTools = true
       else {
-        console.log('Alert')
+        this.spoilerAlertDone = true
         this.confirmViaDialog().subscribe(result => result ? this.showAnalysisTools = true : slide.toggle())
       }
     } else {
