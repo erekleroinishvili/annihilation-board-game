@@ -36,20 +36,20 @@
 
 <div class="divider"></div>
 
-<board-board [size]="size()" [checkerboard]="analysisMode()" #board />
+<board-board [size]="size()" [checkerboard]="showAnalysisTools" #board />
 
 <div class="divider"></div>
 
 <mat-toolbar>
     <span>Stones: {{ board.coinCount }}</span>
     <span class="spacer"></span>
-    <mat-slide-toggle color="primary" [(ngModel)]="showAdvancedStats" *ngIf="analysisMode()">More Stats</mat-slide-toggle>
+    <mat-slide-toggle color="primary" *ngIf="analysisMode()" (change)="handleAnalysisModeToggleReuest(showAnalysisSlide.checked, showAnalysisSlide)" #showAnalysisSlide>Analysis tools</mat-slide-toggle>
     <span class="spacer"></span>
     <span>Moves: {{ board.moveCount }}</span>
 </mat-toolbar>
 
 
-<div class="key-value" *ngIf="showAdvancedStats">
+<div class="key-value" *ngIf="showAnalysisTools">
     <div class="even cell"></div>
     {{ board.coinCountEven }}
 
