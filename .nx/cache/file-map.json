@@ -115,11 +115,11 @@
       },
       {
         "file": "src/app/app.routes.ts",
-        "hash": "5867095953117245844"
+        "hash": "15472119830137081824"
       },
       {
         "file": "src/app/board/board.component.html",
-        "hash": "11799556601254065801"
+        "hash": "2815240233618687879"
       },
       {
         "file": "src/app/board/board.component.scss",
@@ -127,7 +127,7 @@
       },
       {
         "file": "src/app/board/board.component.ts",
-        "hash": "14068920459970183173"
+        "hash": "10325791105289570572"
       },
       {
         "file": "src/app/cell/cell.component.html",
@@ -143,15 +143,15 @@
       },
       {
         "file": "src/app/game/game.component.html",
-        "hash": "3067432203118229473"
+        "hash": "16792261853659333523"
       },
       {
         "file": "src/app/game/game.component.scss",
-        "hash": "5282589410978430353"
+        "hash": "6904792445163545149"
       },
       {
         "file": "src/app/game/game.component.ts",
-        "hash": "7956900869197557649"
+        "hash": "14892191525781478096"
       },
       {
         "file": "src/assets/.gitkeep",
@@ -159,7 +159,7 @@
       },
       {
         "file": "src/favicon.ico",
-        "hash": "14976138827125917077"
+        "hash": "5310227785450738025"
       },
       {
         "file": "src/index.html",
