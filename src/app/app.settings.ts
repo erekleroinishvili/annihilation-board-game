@@ -9,8 +9,8 @@ export const SETTINGS = {
      * will make Analysis Mode accessible
      */
     analysisRoutes: [
-        // '', // Allow Analysis Mode on the main route. The rest of the routes will no longer make difference
-        'x-ray',
+        '', // Allow Analysis Mode on the main route. The rest of the routes will no longer make difference
+        // 'x-ray',
     ] satisfies string[],
 }
 
