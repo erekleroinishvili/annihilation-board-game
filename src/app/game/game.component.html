@@ -36,7 +36,26 @@
 
 <div class="divider"></div>
 
+<div class="content">
+    <h1>Anihilation Game</h1>
+
+    To help with the problem <a href="https://www.olympiad.org.uk/papers/2024/final/thing.pdf">The Thing</a>, presented at the
+    <a href="https://www.olympiad.org.uk/papers/2024/final/round_two.html">The 2024 Final</a> of <a href="https://www.olympiad.org.uk/">British Informatics Olympiad</a>
+</div>
+
 <board-board [size]="size()" [checkerboard]="showAnalysisTools" #board />
+
+<div class="instructions">
+    @if (board.editMode) {
+        <p style="text-align:center;">Click cells to place or remove stones</p>
+    } @else {
+        <p>Achieve minimum number of stones by using the following two moves:</p>
+        <ul>
+            <li>Two adjacent occupied squares can be emptied by clicking one of such squares, shown in green. A second click may be required if more than one adjacent cell is occupied.</li>
+            <li>When all four adjacent squares to an occupied square are vacant, click such an occupied square (blue) to "expand" it, making that square vacant and causing the four adjacent squares to become occupied.</li>
+        </ul>
+    }
+</div>
 
 <div class="divider"></div>
 
